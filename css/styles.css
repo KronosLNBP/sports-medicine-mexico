@@ -245,3 +245,31 @@ button, input, select, textarea { font: inherit; }
   .mobile-bar .mb-cta { flex: 1.2; background: var(--red); color: #fff; }
   body { padding-bottom: 78px; }
 }
+
+/* Página: Para el atleta (atletas.html) */
+.main-nav a[aria-current="page"] { color: var(--red); }
+.page-hero .hero-inner { padding: 72px 24px 80px; }
+.page-hero .hero-copy { flex-basis: 100%; max-width: 820px; }
+.breadcrumb { font-size: 14px; color: var(--on-dark); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.breadcrumb a { color: #fff; display: inline-flex; align-items: center; min-height: 44px; }
+.breadcrumb a:hover { color: #FFB3B3; }
+.athlete-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; }
+.athlete-card { border: 1.5px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; gap: 12px; }
+.athlete-card .li-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--red-soft); color: var(--red-2); display: flex; align-items: center; justify-content: center; }
+.athlete-card h3 { font-family: var(--font-display); font-weight: 800; font-size: 26px; text-transform: uppercase; color: var(--navy); line-height: 1.05; }
+.athlete-card p { font-size: 15px; color: var(--muted); flex: 1; }
+.athlete-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--red-2); }
+.athlete-who { background: var(--soft); }
+.athlete-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px; align-items: start; }
+.athlete-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.athlete-list li { background: #fff; border-left: 4px solid var(--red); border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px; }
+.athlete-list strong { color: var(--navy); font-size: 17px; }
+.athlete-list span { color: var(--muted); font-size: 15px; }
+.athlete-h2 { margin-bottom: 40px; }
+.athlete-note { margin-top: 28px; padding: 18px 20px; border-radius: 12px; background: var(--red-soft); color: var(--ink); font-size: 15px; max-width: 860px; }
+.athlete-cta .booking-copy { max-width: 860px; }
+.program-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 640px) {
+  .page-hero .hero-inner { padding: 40px 20px 56px; }
+  .program-actions .btn, .athlete-cta .btn { width: 100%; white-space: normal; text-align: center; }
+}
