@@ -273,3 +273,20 @@ button, input, select, textarea { font: inherit; }
   .page-hero .hero-inner { padding: 40px 20px 56px; }
   .program-actions .btn, .athlete-cta .btn { width: 100%; white-space: normal; text-align: center; }
 }
+
+/* Página para personas mayores (personas-mayores.html) */
+.elder-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 32px; align-items: start; }
+.elder-col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.elder-col h3 { font-family: var(--font-display); font-weight: 800; font-size: 28px; text-transform: uppercase; color: var(--navy); line-height: 1.05; }
+.elder-col .athlete-list span { font-size: 16px; }
+
+/* Bloque "También te puede interesar" (páginas internas) */
+.related { padding-top: 0; }
+.related h2 { margin-bottom: 28px; }
+.related-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; }
+.related-card { height: 100%; display: flex; flex-direction: column; gap: 8px; padding: 26px; border-radius: var(--radius); border: 1.5px solid var(--line); background: #fff; color: var(--ink); text-decoration: none; transition: border-color .15s ease, transform .15s ease; }
+.related-card:hover, .related-card:focus-visible { border-color: var(--red); color: var(--ink); transform: translateY(-2px); }
+.related-kicker { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red-2); }
+.related-card strong { font-size: 20px; font-weight: 800; color: var(--navy); }
+.related-text { color: var(--muted); font-size: 15px; line-height: 1.55; flex: 1; }
+.related-go { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 700; color: var(--red-2); }

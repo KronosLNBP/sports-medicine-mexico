@@ -8,6 +8,8 @@ Sitio estático (HTML, CSS y JavaScript, sin compilación). Reemplaza el sitio a
 
 ```
 index.html                     Página de inicio (una sola página con secciones)
+atletas.html                   Fisioterapia para el atleta
+personas-mayores.html          Fisioterapia para personas mayores (paciente y familiar)
 aviso-de-privacidad.html       Aviso de privacidad
 404.html                       Página de error
 servicios.html, sucursales.html, contacto.html
