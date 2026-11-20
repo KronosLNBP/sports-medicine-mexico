@@ -125,7 +125,7 @@
   'use strict';
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var sel = '.section-head, .branch, .athlete-card, .steps li, .related-card, .program, .pillar, .booking-card, .elder-col, .athlete-note';
+  var sel = '.section-head, .branch, .athlete-card, .steps li, .related-card, .care, .spec, .pillar, .booking-card, .elder-col, .athlete-note, .care-note';
   var items = document.querySelectorAll('main ' + sel.split(', ').join(', main '));
   if (!items.length) return;
   document.documentElement.classList.add('js-reveal');

@@ -15,7 +15,7 @@ aviso-de-privacidad.html       Aviso de privacidad
 404.html                       Página de error
 servicios.html, contacto.html  Redirigen a /#programas y /#cita (páginas del sitio anterior)
 sucursales.html                Redirige a sedes.html
-css/styles.css                 Estilos (azul marino #0D2142 y rojo #D32F2F del logo)
+css/styles.css                 Estilos "bienestar suave": crema, azul suave y verde salvia (Fraunces + Nunito Sans)
 js/config.js                   Número de WhatsApp (editar aquí)
 js/main.js                     Menú, filtro de sedes, formulario, animaciones de entrada y botón «Volver arriba»
 robots.txt, sitemap.xml        SEO
