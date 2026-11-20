@@ -10,17 +10,22 @@ Sitio estático (HTML, CSS y JavaScript, sin compilación). Reemplaza el sitio a
 index.html                     Página de inicio (una sola página con secciones)
 atletas.html                   Fisioterapia para el atleta
 personas-mayores.html          Fisioterapia para personas mayores (paciente y familiar)
+sedes.html                     Las 5 sedes por ciudad: dirección, teléfono, cómo llegar y horario de Del Valle
 aviso-de-privacidad.html       Aviso de privacidad
 404.html                       Página de error
-servicios.html, sucursales.html, contacto.html
-                               Redirigen a /#programas, /#sedes y /#cita (páginas del sitio anterior)
+servicios.html, contacto.html  Redirigen a /#programas y /#cita (páginas del sitio anterior)
+sucursales.html                Redirige a sedes.html
 css/styles.css                 Estilos (azul marino #0D2142 y rojo #D32F2F del logo)
 js/config.js                   Número de WhatsApp (editar aquí)
-js/main.js                     Menú, filtro de sedes y formulario
+js/main.js                     Menú, filtro de sedes, formulario, animaciones de entrada y botón «Volver arriba»
 robots.txt, sitemap.xml        SEO
 ```
 
 El logo (`img/logo.png`) ya está en el hosting y no se toca al publicar.
+
+## Páginas publicadas
+- `/` (inicio), `atletas.html`, `personas-mayores.html`, `sedes.html`, `aviso-de-privacidad.html`
+- Redirecciones (no van en sitemap.xml): `servicios.html`, `sucursales.html`, `contacto.html`
 
 ## Datos usados (del sitio anterior)
 - WhatsApp y citas: 55 3501 0034 · citas@sportsmedicine.com.mx

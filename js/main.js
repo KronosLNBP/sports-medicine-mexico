@@ -119,3 +119,43 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitNav);
   fitNav();
 })();
+
+// Animaciones de entrada al hacer scroll (sin JS o con movimiento reducido, todo queda visible)
+(function () {
+  'use strict';
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var sel = '.section-head, .branch, .athlete-card, .steps li, .related-card, .program, .pillar, .booking-card, .elder-col, .athlete-note';
+  var items = document.querySelectorAll('main ' + sel.split(', ').join(', main '));
+  if (!items.length) return;
+  document.documentElement.classList.add('js-reveal');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  items.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  // Al imprimir o si algo falla, mostrar todo
+  window.addEventListener('beforeprint', function () { items.forEach(function (el) { el.classList.add('is-visible'); }); });
+})();
+
+// Botón "Volver arriba" en páginas largas
+(function () {
+  'use strict';
+  if (document.body.scrollHeight < window.innerHeight * 2.5) return;
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'to-top';
+  btn.setAttribute('aria-label', 'Volver arriba');
+  btn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>';
+  document.body.appendChild(btn);
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    var skip = document.querySelector('.skip-link') || document.body;
+    if (skip.focus) skip.focus({ preventScroll: true });
+  });
+  var onScroll = function () { btn.classList.toggle('is-shown', window.scrollY > window.innerHeight); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();

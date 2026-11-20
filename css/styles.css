@@ -307,3 +307,35 @@ button, input, select, textarea { font: inherit; }
 .site-header.nav-collapsed .main-nav.is-open { display: flex; }
 .site-header.nav-collapsed .main-nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
 .site-header.nav-collapsed .menu-toggle { display: inline-flex; }
+
+/* ===== Día 3: página de sedes ===== */
+.city-jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.city-jump a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,.45); color: #fff; font-weight: 700; text-decoration: none; }
+.city-jump a:hover, .city-jump a:focus-visible { background: rgba(255,255,255,.12); color: #fff; }
+.city-section { scroll-margin-top: 80px; }
+.city-section:nth-of-type(even) { background: var(--soft); }
+.city-section .branch { scroll-margin-top: 90px; }
+.pill-wa { background: var(--whatsapp); color: var(--ink); }
+.pill-wa:hover { color: var(--ink); filter: brightness(.95); }
+.branch-hours { margin: 0; display: grid; gap: 6px; padding: 12px 14px; border-radius: 12px; background: var(--soft); font-size: 14px; }
+.branch-hours div { display: flex; justify-content: space-between; gap: 12px; }
+.branch-hours dt { color: var(--muted); }
+.branch-hours dd { margin: 0; font-weight: 700; color: var(--navy); }
+.branches-more { margin-top: 28px; text-align: center; }
+
+/* ===== Día 3: animaciones de entrada (solo si main.js las activa) ===== */
+.js-reveal .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.js-reveal .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ===== Día 3: botón Volver arriba ===== */
+.to-top { position: fixed; right: 33px; bottom: 100px; z-index: 59; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--line); background: rgba(255,255,255,.95); color: var(--navy); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 18px rgba(13,33,66,.18); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s ease, transform .2s ease, visibility .2s; }
+.to-top.is-shown { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { border-color: var(--navy); }
+.to-top:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .to-top { right: 16px; bottom: calc(86px + env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
